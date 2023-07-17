@@ -1,0 +1,24 @@
+{
+    "name": "",
+    "version": "1.0.1",
+    "private": false,
+    "repository": "https://github.com/dopt/users-javascript-browser-client",
+    "main": "./index.js",
+    "types": "./index.d.ts",
+    "scripts": {
+        "format": "prettier --write 'src/**/*.ts'",
+        "build": "tsc",
+        "prepack": "cp -rv dist/. ."
+    },
+    "dependencies": {
+        "url-join": "4.0.1",
+        "@types/url-join": "4.0.1",
+        "axios": "1.4.0",
+        "@ungap/url-search-params": "0.2.2"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.33",
+        "prettier": "2.7.1",
+        "typescript": "4.6.4"
+    }
+}
