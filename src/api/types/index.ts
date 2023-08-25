@@ -2,7 +2,6 @@ export * from "./IdentifyUserRequestBodyGroupsItem";
 export * from "./IdentifyBatchRequestBodyItem";
 export * from "./IdentifyBatchRequestBodyItemGroupsItem";
 export * from "./BadRequestErrorResponseBody";
-export * from "./BadRequestErrorResponseBodyCode";
 export * from "./IdentifyBatchRequestBody";
 export * from "./IdentifyBatchResponseBody";
 export * from "./IdentifyRequestBody";

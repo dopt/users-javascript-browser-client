@@ -10,13 +10,13 @@ export const BadRequestErrorResponseBody: core.serialization.ObjectSchema<
     serializers.BadRequestErrorResponseBody.Raw,
     DoptApi.BadRequestErrorResponseBody
 > = core.serialization.object({
-    code: core.serialization.lazy(async () => (await import("..")).BadRequestErrorResponseBodyCode),
+    code: core.serialization.stringLiteral("invalid_request_error"),
     details: core.serialization.string(),
 });
 
 export declare namespace BadRequestErrorResponseBody {
     interface Raw {
-        code: serializers.BadRequestErrorResponseBodyCode.Raw;
+        code: "invalid_request_error";
         details: string;
     }
 }
