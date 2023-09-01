@@ -43,7 +43,7 @@ export class Groups {
                 "X-Api-Key": await core.Supplier.get(this._options.apiKey),
                 "X-Fern-Language": "JavaScript",
                 "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "1.0.6",
+                "X-Fern-SDK-Version": "1.0.7",
             },
             contentType: "application/json",
             body: await serializers.IdentifyGroupRequestBody.jsonOrThrow(request, { unrecognizedObjectKeys: "strip" }),
