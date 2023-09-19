@@ -40,10 +40,10 @@ export class Groups {
             ),
             method: "POST",
             headers: {
-                "X-Api-Key": await core.Supplier.get(this._options.apiKey),
+                "x-api-key": await core.Supplier.get(this._options.apiKey),
                 "X-Fern-Language": "JavaScript",
                 "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "1.1.0",
+                "X-Fern-SDK-Version": "1.1.1",
             },
             contentType: "application/json",
             body: await serializers.IdentifyGroupRequestBody.jsonOrThrow(request, { unrecognizedObjectKeys: "strip" }),
