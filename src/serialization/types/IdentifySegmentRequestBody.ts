@@ -9,17 +9,24 @@ import * as core from "../../core";
 export const IdentifySegmentRequestBody: core.serialization.Schema<
     serializers.IdentifySegmentRequestBody.Raw,
     DoptApi.IdentifySegmentRequestBody
-> = core.serialization.undiscriminatedUnion([
-    core.serialization.lazyObject(
-        async () => (await import("..")).IdentifySegmentRequestBodyIdentifySegmentRequestBody
-    ),
-    core.serialization.lazyObject(
-        async () => (await import("..")).IdentifySegmentRequestBodyIdentifySegmentRequestBody
-    ),
-]);
+> = core.serialization
+    .union("type", {
+        identify: core.serialization.lazyObject(async () => (await import("..")).IdentifySegmentRequestBodyIdentify),
+        group: core.serialization.lazyObject(async () => (await import("..")).IdentifySegmentRequestBodyGroup),
+    })
+    .transform<DoptApi.IdentifySegmentRequestBody>({
+        transform: (value) => value,
+        untransform: (value) => value,
+    });
 
 export declare namespace IdentifySegmentRequestBody {
-    type Raw =
-        | serializers.IdentifySegmentRequestBodyIdentifySegmentRequestBody.Raw
-        | serializers.IdentifySegmentRequestBodyIdentifySegmentRequestBody.Raw;
+    type Raw = IdentifySegmentRequestBody.Identify | IdentifySegmentRequestBody.Group;
+
+    interface Identify extends serializers.IdentifySegmentRequestBodyIdentify.Raw {
+        type: "identify";
+    }
+
+    interface Group extends serializers.IdentifySegmentRequestBodyGroup.Raw {
+        type: "group";
+    }
 }

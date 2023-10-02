@@ -43,7 +43,7 @@ export class Users {
                 "x-api-key": await core.Supplier.get(this._options.apiKey),
                 "X-Fern-Language": "JavaScript",
                 "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "1.1.1",
+                "X-Fern-SDK-Version": "1.1.2",
             },
             contentType: "application/json",
             body: await serializers.IdentifyUserRequestBody.jsonOrThrow(request, { unrecognizedObjectKeys: "strip" }),
@@ -125,7 +125,7 @@ export class Users {
                 "x-api-key": await core.Supplier.get(this._options.apiKey),
                 "X-Fern-Language": "JavaScript",
                 "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "1.1.1",
+                "X-Fern-SDK-Version": "1.1.2",
             },
             contentType: "application/json",
             body: await serializers.users.identifyUsers.Request.jsonOrThrow(request, {

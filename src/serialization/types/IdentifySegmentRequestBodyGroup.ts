@@ -6,19 +6,17 @@ import * as serializers from "..";
 import * as DoptApi from "../../api";
 import * as core from "../../core";
 
-export const IdentifySegmentRequestBodyIdentifySegmentRequestBody: core.serialization.ObjectSchema<
-    serializers.IdentifySegmentRequestBodyIdentifySegmentRequestBody.Raw,
-    DoptApi.IdentifySegmentRequestBodyIdentifySegmentRequestBody
+export const IdentifySegmentRequestBodyGroup: core.serialization.ObjectSchema<
+    serializers.IdentifySegmentRequestBodyGroup.Raw,
+    DoptApi.IdentifySegmentRequestBodyGroup
 > = core.serialization.object({
-    type: core.serialization.stringLiteral("group"),
     groupId: core.serialization.string(),
     userId: core.serialization.string(),
     traits: core.serialization.record(core.serialization.string(), core.serialization.unknown()),
 });
 
-export declare namespace IdentifySegmentRequestBodyIdentifySegmentRequestBody {
+export declare namespace IdentifySegmentRequestBodyGroup {
     interface Raw {
-        type: "group";
         groupId: string;
         userId: string;
         traits: Record<string, unknown>;

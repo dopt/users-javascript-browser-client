@@ -5,7 +5,6 @@
 import * as DoptApi from "..";
 
 export interface IdentifyBatchRequestBodyItem {
-    /** <span style="white-space: nowrap">`non-empty`</span> */
     identifier: string;
     properties: Record<string, unknown>;
     groups?: DoptApi.IdentifyBatchRequestBodyItemGroupsItem[];

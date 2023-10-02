@@ -3,7 +3,6 @@
  */
 
 export interface SegmentCommon {
-    /** <span style="white-space: nowrap">`non-empty`</span> */
     userId: string;
     traits: Record<string, unknown>;
 }

@@ -4,9 +4,7 @@
 
 export interface SegmentGroup {
     type: "group";
-    /** <span style="white-space: nowrap">`non-empty`</span> */
     groupId: string;
-    /** <span style="white-space: nowrap">`non-empty`</span> */
     userId: string;
     traits: Record<string, unknown>;
 }

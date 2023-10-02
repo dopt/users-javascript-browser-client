@@ -3,7 +3,6 @@
  */
 
 export interface IdentifyUserRequestBodyGroupsItem {
-    /** <span style="white-space: nowrap">`non-empty`</span> */
     identifier: string;
     properties: Record<string, unknown>;
 }
