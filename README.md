@@ -1,7 +1,7 @@
 # Dopt users JavaScript browser client
 
 ![npm sheild](https://img.shields.io/npm/v/%40dopt/users-javascript-browser-client)
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-SDK%20generated%20by%20Fern-brightgreen)](https://github.com/fern-api/fern)
+[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-SDK%20generated%20by%20Fern-brightgreen)](https://buildwithfern.com/?utm_source=dopt/users-javascript-browser-client/readme)
 
 ## Overview
 
